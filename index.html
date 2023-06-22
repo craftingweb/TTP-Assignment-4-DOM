@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hang In There</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -11,24 +21,33 @@
     <header>
       <h1>Motivational Posters</h1>
     </header>
-
     <section class="poster">
       <img
         id="poster-image"
         src="https://i.pinimg.com/originals/3d/61/73/3d6173df3343d11273deab8e842c0f4b.jpg"
         alt="Motivational Poster"
       />
-      <h2 id="poster-title">Title</h2>
-      <h3 id="poster-quote">"Quote goes here something motivating"</h3>
+      <div class="quote-container" id="quote-container">
+        <div class="quote-text">
+          <i class="fas fa-quote-left"></i>
+          <span id="poster-quote">"Quote goes here something motivating"</span>
+        </div>
+        <div class="quote-author">
+          <span id="poster-title">Author</span>
+        </div>
+      </div>
     </section>
-
-    <button id="randomize">Randomize</button>
+    <div class="button-container">
+      <button id="randomize" title="It will generate random poster">
+        Click Here
+      </button>
+    </div>
 
     <form id="poster-form">
       <input
         type="text"
         id="poster-form-title"
-        placeholder="Enter title name"
+        placeholder="Enter author name"
       />
       <input
         type="text"

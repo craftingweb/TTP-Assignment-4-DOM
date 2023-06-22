@@ -15,23 +15,25 @@ const posters = [
   {
     image:
       "https://travelprnews.com/wp-content/uploads/2021/11/https___specials-images.forbesimg.com_imageserve_920377840_0x0.jpg",
-    title: "Adventure.",
+    title: "Nora",
     quote: "Adventure is out there.",
   },
   {
     image: "https://guides.williams.edu/files/2016/06/travel-04.jpg",
-    title: "Journey",
+    title: "Shmidt",
     quote: "Live your life by a compass, not a clock.",
   },
   {
     image:
       "https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1093840488-5-scaled.jpg?resize=1536,1024",
-    title: "Nature",
+    title: "Socrates",
     quote: "The journey, not the arrival, matters.",
   },
   // Add more poster objects as needed
 ];
-
+posterTitle.textContent = posters[0].title;
+posterQuote.textContent = posters[0].quote;
+posterImage.src = posters[0].image;
 // Event listener for randomize button
 // TODO: Add an event listener to the randomizeButton that calls a function when clicked
 randomizeButton.addEventListener("click", generateRandomPoster);
@@ -41,6 +43,7 @@ randomizeButton.addEventListener("click", generateRandomPoster);
 submitBtn.addEventListener("click", generateCustomPoster);
 // Function to generate a random poster
 function generateRandomPoster() {
+  document.querySelector(".poster").classList.remove("hidden");
   let randomObject = posters[Math.floor(Math.random() * posters.length)];
   const { image, title, quote } = randomObject;
   posterImage.src = image;
